@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Szemesi Pékség Flotta Térkép</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+    }
+    #map-container {
+      width: 100%;
+      height: 100%;
+    }
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style>
+</head>
+<body>
+  <div id="map-container">
+    <iframe 
+      src="https://fleet.trackgps.ro/public-map/9DF91D48-3FA1-484B-AA96-50C261A8122C" 
+      allowfullscreen
+      referrerpolicy="no-referrer"
+      allow="geolocation"
+    ></iframe>
+  </div>
+</body>
+</html>
