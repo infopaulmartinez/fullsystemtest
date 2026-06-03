@@ -1,0 +1,82 @@
+/* Custom scrollbar styles - szép, finom, láthatatlan */
+
+/* Firefox scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(156, 163, 175, 0.4) transparent;
+}
+
+/* Chrome, Safari, Edge scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(156, 163, 175, 0.3);
+  border-radius: 3px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+  transition: background-color 0.2s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(156, 163, 175, 0.6);
+}
+
+/* Dark mode scrollbar */
+html.dark ::-webkit-scrollbar-thumb {
+  background-color: rgba(75, 85, 99, 0.3);
+  background-clip: content-box;
+}
+
+html.dark ::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(75, 85, 99, 0.6);
+}
+
+html.dark {
+  scrollbar-color: rgba(75, 85, 99, 0.3) transparent;
+}
+
+/* Sidebar scrollbar specifikusan */
+.sidebar-menu {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(156, 163, 175, 0.3) transparent;
+}
+
+.sidebar-menu::-webkit-scrollbar {
+  width: 4px;
+}
+
+.sidebar-menu::-webkit-scrollbar-thumb {
+  background-color: rgba(156, 163, 175, 0.3);
+  border-radius: 2px;
+}
+
+.sidebar-menu::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(156, 163, 175, 0.6);
+}
+
+/* Dark mode */
+html.dark .sidebar-menu::-webkit-scrollbar-thumb {
+  background-color: rgba(75, 85, 99, 0.3);
+}
+
+html.dark .sidebar-menu::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(75, 85, 99, 0.6);
+}
+
+/* Tipp: alul egy finom jelzés, hogy lehet még görgetni */
+.sidebar-overflow-indicator {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 8px;
+  background: linear-gradient(to bottom, transparent 0%, rgba(156, 163, 175, 0.1) 100%);
+  pointer-events: none;
+}
